@@ -1,0 +1,104 @@
+/*
+Title : Geodis Global Account CSS Theme
+Description : Signin & Workspaces
+Author : Damien OGEE
+Company : Point Ligne Plan
+Date : 02/08/2016
+*/
+
+
+/* Common */
+body {
+    background-color: #3200e6;
+}
+header, footer {
+    color: #fff;
+}
+main {
+    margin: 50px auto;
+}
+#signin main {
+    max-width: 380px;
+}
+#workspaces main {
+    max-width: 700px;
+}
+#logo {
+    margin-top: 100px;
+}
+
+/* Signin */
+#signin-bloc .btn {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+#signin-bloc .btn-primary {
+    margin-top: 20px;
+}
+#signin-bloc label {
+    color: #c2c2c2;
+    font-weight: normal;
+}
+#signin-bloc input {
+    background-color: #e3e3e3;
+    border: 0;
+    box-shadow: none;
+    height: 40px;
+}
+#slogan {
+    font-size: 1.2em;
+}
+#copyright {
+    display: block;
+    font-size: 0.7em;
+}
+
+
+/* Workspaces */
+form#signin-bloc {
+    background-color: #fff;
+    padding: 30px 40px;
+    box-shadow: 0 0 5px #fff;
+}
+#workspaces-tiles {
+    margin-top: 30px;
+}
+#workspaces-head h4 {
+    margin-bottom: 0;
+}
+#workspaces-head {
+    color: #fff;
+}
+#workspaces-tiles .link {
+    background-color: #fff;
+    width: 220px;
+    height: 140px;
+    margin: 0 10px;
+}
+.workspace-title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: #000;
+}
+.workspace-logo {
+    position: absolute;
+    top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

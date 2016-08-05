@@ -1,0 +1,87 @@
+/*
+Title : Geodis Global Account CSS Theme
+Description : Regles CSS pour les pages de résultats
+Author : Damien OGEE
+Company : Point Ligne Plan
+Date : 04/08/2016
+*/
+
+
+/* Common */
+.results span strong {
+    color: #000;
+}
+.results main span {
+    color: #999;
+}
+
+/* Header */
+.result-header {
+    background-color: #EBEBEB;
+    border-bottom: 1px solid #706A7B;
+    min-height: 150px;
+    padding: 30px 0;
+}
+.save-bookmark {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+.search-button {
+    position: absolute;
+    right: 30px;
+}
+.result-header .container {
+    position: relative;
+}
+.result-header h1 {
+    margin: 0;
+}
+.back-button img, .search-button img {
+    width: 30px;
+}
+.result-title span {
+    font-style: italic;
+}
+.profil a {
+    background: url(../svg/profil_blanc.svg) center left 30px no-repeat;
+    background-size: 30px;
+    text-align: left;
+    line-height: 14px !important;
+    padding: 21px 25px 21px 70px !important;
+}
+.profil .name {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.profil .company {
+    display: block;
+}
+.burger a {
+    background: url(../svg/burger_blanc.svg) center left 30px no-repeat;
+    background-size: 26px;
+    padding-left: 70px !important;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* Main */
+.result-row {
+    padding: 25px 0 15px;
+    border-bottom: 1px solid #ccc;
+}
+.result-row .btn-group {
+    position: absolute;
+    right: 0;
+}
+.result-row .step {
+    width: 25px;
+}
+.result-row .id {
+    color: #3200e6;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+

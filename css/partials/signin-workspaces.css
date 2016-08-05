@@ -1,6 +1,6 @@
 /*
 Title : Geodis Global Account CSS Theme
-Description : Signin & Workspaces
+Description : Regles CSS pour les pages de login et de sélection des workspaces
 Author : Damien OGEE
 Company : Point Ligne Plan
 Date : 02/08/2016
@@ -25,8 +25,12 @@ main {
 }
 #logo {
     margin-top: 100px;
+    width: 135px;
+    height:50px;
 }
-
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+}
 /* Signin */
 #signin-bloc .btn {
     width: 100%;
@@ -74,19 +78,26 @@ form#signin-bloc {
     background-color: #fff;
     width: 220px;
     height: 140px;
-    margin: 0 10px;
+    display: block;
+    position: relative;
 }
 .workspace-title {
     position: absolute;
     bottom: 15px;
     left: 15px;
     font-size: 1.3em;
-    text-transform: uppercase;
     color: #000;
 }
 .workspace-logo {
     position: absolute;
     top: 15px;
+    left: 15px;
+    width: 65px;
+    height: 65px;
+}
+#workspaces-tiles .col-xs-12 .link {
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 

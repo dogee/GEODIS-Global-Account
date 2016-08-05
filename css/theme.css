@@ -1,6 +1,6 @@
 /*
 Title : Geodis Global Account CSS Theme
-Description : Common parts
+Description : Regles CSS valables pour l'ensemble des pages
 Author : Damien OGEE
 Company : Point Ligne Plan
 Date : 02/08/2016
@@ -8,3 +8,38 @@ Date : 02/08/2016
 
 
 
+/* Tools & Common */
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+.btn-group .btn+.btn {
+    margin-left: 2px;
+}
+
+/* Header */
+.navbar-brand {
+    padding: 12px 15px;
+}
+.navbar-brand>img {
+    height: 45px;
+}
+
+/* Main */
+main {
+    margin-top: 70px;
+}
+
+
+/* Footer */
+footer {
+    color:#3200e6;
+    margin-top: 50px;
+}
+#slogan {
+    font-size: 1.2em;
+}
+#copyright {
+    display: block;
+    font-size: 0.7em;
+}

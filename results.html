@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Search results</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/partials/results.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!--[endif]---->
+  </head>
+
+  <body class="inapp results">
+      
+      <header class="text-center">      
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+          
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img src="css/svg/logo_geodis.svg" id="logo" alt="Logo Geodis"/>
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+              <ul class="nav navbar-nav navbar-right">
+                <li class="profil">
+                    <a href="#">
+                        <span class="name">Gilles</span>
+                        <span class="company">Nestlé HealthSciences</span>
+                    </a>
+                </li>
+                <li class="burger">
+                    <a href="#">
+                        <span class="title">menu</span>
+                    </a>
+                </li>
+              </ul>
+            
+          </div><!-- /.container-fluid -->
+        </nav>        
+      </header>
+      
+      <main>
+        <div class="container-fluid">
+            <div class="row result-header">
+            
+                <div class="container">
+                    <div class="row">
+                        <a href="#" title="back button" class="back-button pull-left col-md-1 col-sm-24">
+                            <img src="css/svg/fleche_bleue.svg" alt="back button"/>
+                        </a>
+                        
+                        <a href="#" title="search-button" class="search-button">
+                            <img src="css/svg/search_bleu.svg" alt="search button"/>
+                        </a>
+                        
+                        <div class="result-title col-md-8 col-xs-24">
+                            <h1>Search result</h1>
+                            <span class="clearfix">Object type <strong>--Any--</strong></span>
+                            <span class="clearfix">Dept. <strong>47</strong></span>
+                            <span class="clearfix">Status <strong>Delivered</strong></span>
+                        </div>
+                        
+                        <div class="btn-group save-bookmark">
+                          <button type="button" class="btn btn-default">Save Bookmark</button>
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Save</a></li>
+                            <li><a href="#">Save As</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="row result-main">
+                <div class="container">
+                
+                    <div class="row result-row">
+                        <div class="col-xs-24 col-sm-1">
+                            <img src="css/svg/majorstep/client_orders.svg" alt="default step" class="pull-left step"/>
+                        </div>
+                        <div class="row col-xs-24 col-sm-23">
+                            <span class="clearfix col-xs-24 id">0007374309</span>                           
+                            <p class="pull-left result-col col-xs-24 col-sm-6">
+                                <span class="clearfix">Geodis order ID <strong>00280559</strong></span>
+                                <span class="clearfix">Created on <strong>2016/02/10 07:43</strong></span>
+                                <span class="clearfix">By <strong>Nestlé HealthSciences</strong></span>
+                            </p>
+                            <p class="pull-left result-col col-xs-24 col-sm-5">
+                                <span class="clearfix">To <strong>Pharmacie d'Aquitaine</strong></span>
+                                <span class="clearfix">France/47400/Tonneins</span>
+                            </p>
+                            <p class="pull-left result-col col-xs-24 col-sm-4">
+                                <span class="clearfix"><strong>4</strong></span>
+                                <span class="clearfix">Operations</span>
+                            </p>
+                            <p class="pull-left result-col col-xs-24 col-sm-5">
+                                <span class="clearfix"><strong>Closed</strong></span>
+                                <span class="clearfix">2016/03/08 09:27</span>
+                            </p>                
+                            <div class="col-xs-24 col-sm-4">
+                                <div class="btn-group details">
+                                  <button type="button" class="btn btn-default">Details</button>
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="#">Events</a></li>
+                                    <li><a href="#">Contents</a></li>
+                                    <li><a href="#">Export</a></li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+      </main>
+      
+      <footer class="text-center">
+        <span id="slogan">We logistic your growth</span>
+        <span id="copyright">@ 2016 GEODIS All right reserved - Legal information</span>
+      </footer>
+      
+  </body>
+  
+</html>

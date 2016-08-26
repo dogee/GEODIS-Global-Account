@@ -20,8 +20,142 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
 
+    <!-- Include jQuery.mmenu .css files -->
+    <link type="text/css" href="css/jquery.mmenu.all.css" rel="stylesheet" />
+    <!-- Include jQuery and the jQuery.mmenu .js files -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mmenu.all.min.js"></script>
+    
+
+    <script>
+        jQuery(document).ready(function($){  
+          
+          $("#menu").mmenu({
+            // options
+            "setSelected": {
+              "hover": true,
+              "parent": true
+            },
+            "navbar": {
+                "add": true,
+                "title": "test"
+            },
+            "currentItem": {
+                "find": true
+            },
+            "offCanvas": {
+              "position": "right",
+              "zposition": "front",
+              "pageSelector": ".results"
+            },
+            "extensions": [
+              "pagedim-black",
+              "multiline"
+            ]
+          },
+          {
+            // configuration
+            clone: true
+          });
+
+          
+          $("#menu").mmenu({
+            "setSelected": {
+                "hover": true,
+                "parent": true
+            },
+            "navbar": {
+                "title": ""
+            },
+            "columns": {
+              "add": true,
+              "visible": {
+                "max": 5,
+                "min": 1
+              }
+            },
+            "offCanvas": {
+              "position": "right",
+              "zposition": "front",
+              "pageSelector": ".results"
+            },
+            "extensions": [
+              "pagedim-black",
+              "multiline"
+            ]
+          });
+
+          $("#profil").mmenu({
+            "offCanvas": {
+              "position": "right",
+              "zposition": "front",
+              "pageSelector": ".results"
+            },
+            "extensions": [
+              "pagedim-black",
+              "multiline"
+            ]
+          }); 
+
+
+            
+            
+            /* TopNav Desktop */
+            var myMenu = $("#menu");
+            // initialize mmenu API
+            var myMenuAPI = myMenu.data( "mmenu" );
+            // function to set to specific subMenu
+            function setMMenu(subMenu) {
+              // set to subMenu
+              var current = myMenu.find(subMenu);
+              // myMenuAPI.setSelected(current.first());
+              myMenuAPI.openPanel(current.closest(".mm-panel")); 
+            }
+            // function to open mmmenu to specific subMenu
+            function openMMenu() {
+              myMenuAPI.open();
+            }
+            // function to close mmmenu to specific subMenu
+            function closeMMenu() {
+              myMenuAPI.close();
+            }		
+
+        
+            /* TopNav Mobile */
+            var myMenuM = $("#mm-menu");
+            // initialize mmenu API
+            var myMenuAPIM = myMenuM.data( "mmenu" );
+            // function to set to specific subMenu
+            function setMMenuM(subMenu) {
+              // set to subMenu
+              var current = myMenuM.find(subMenu);
+              // myMenuAPI.setSelected(current.first());
+              myMenuAPIM.openPanel(current.closest(".mm-panel")); 
+            }
+            // function to open mmmenu to specific subMenu
+            function openMMenuM() {
+              myMenuAPIM.open();
+            }
+            function closeMMenuM() {
+              myMenuAPIM.close();
+            }			
+
+      
+            /* Close menu from blue zone */
+            $( "#menu, #mm-menu, #profil, #mm-profil" ).click(function(e) {	
+                if ($(this).hasClass('mm-opened') && e.offsetX < 0) {
+                    closeMMenu();
+                    closeMMenuM();
+                    //$( "body" ).trigger( "click" );
+                }
+            });
+
+          
+       });
+    </script>
+    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -45,13 +179,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
               <ul class="nav navbar-nav navbar-right">
                 <li class="profil">
-                    <a href="#">
+                    <a href="#profil">
                         <span class="name">Gilles</span>
                         <span class="company">Nestlé HealthSciences</span>
                     </a>
                 </li>
                 <li class="burger">
-                    <a href="#">
+                    <a href="#menu">
                         <span class="title">menu</span>
                     </a>
                 </li>
@@ -61,6 +195,62 @@
         </nav>        
       </header>
       
+      
+      <!-- Le menu principal -->
+      <nav id="menu">
+         <ul>
+            <li class="workspace">
+                <img src="css/svg/menu/track_and_trace.svg" alt="track&trace picto" />
+                <a href="#"><span class="title">track & trace</span></a>
+                <span class="description">Track your shipment</span>                
+            </li>
+            <li class="workspace">
+                <img src="css/svg/menu/business_processes.svg" alt="track&trace picto" />
+                <a href="#"><span class="title">business processes</span></a>
+                <span class="description">Business Processes Management</span>
+            </li>
+            <li class="workspace">
+                <img src="css/svg/menu/dashboard.svg" alt="track&trace picto" />
+                <a href="#"><span class="title">Dashboard</span></a>
+                <span class="description">Analytics and Dashboard</span>
+                <ul class="dashboard">
+                    <li>
+                        <img src="css/svg/image_dashboard_1.jpg" alt="dashboard thumbnail" />
+                        <a href="#"><span class="title">Dashboard 1</span></a>
+                    </li>
+                    <li>
+                        <img src="css/svg/image_dashboard_2.jpg" alt="dashboard thumbnail" />
+                        <a href="#"><span class="title">Dashboard 2</span></a>
+                    </li>
+                    <li><a href="#"><span class="title">Dashboard 3</span></a></li>
+                </ul>                
+            </li>                        
+            <li class="workspace">
+                <img src="css/svg/menu/document.svg" alt="track&trace picto" />
+                <a href="#"><span class="title">documents</span></a>
+                <span class="description">Documents Management</span>
+            </li>
+            <li class="workspace">
+                <img src="css/svg/menu/warehouse_sights.svg" alt="track&trace picto" />
+                <a href="#"><span class="title">warehouse sights</span></a>
+                <span class="description">Stock Visibility</span>
+            </li>            
+            <li class="Divider"></li>
+            <li><a href="/contact">Geodis News</a></li>
+            <li><a href="/contact">Legal Information</a></li>
+         </ul>
+      </nav>
+      
+      <!-- Le menu de profil -->
+      <nav id="profil">
+         <ul>
+            <li><a href="/">My Account</a></li>
+            <li><a href="/contact">Sign out</a></li>
+         </ul>
+      </nav>      
+
+      
+      
       <main>
         <div class="container-fluid">
             <div class="row result-header">
@@ -68,7 +258,7 @@
                 <div class="container">
                     <div class="row">
                         <a href="#" title="back button" class="back-button pull-left col-md-1 col-sm-24">
-                            <img src="css/svg/fleche_bleue.svg" alt="back button"/>
+                            <img src="css/svg/arrow_back.svg" alt="back button"/>
                         </a>
                         
                         <a href="#" title="search-button" class="search-button">
@@ -77,9 +267,9 @@
                         
                         <div class="result-title col-md-8 col-xs-24">
                             <h1>Search result</h1>
-                            <span class="clearfix">Object type <strong>--Any--</strong></span>
-                            <span class="clearfix">Dept. <strong>47</strong></span>
-                            <span class="clearfix">Status <strong>Delivered</strong></span>
+                            <div><span class="label">Object type </span><h4>--Any--</h4></div>
+                            <div><span class="label">Dept. </span><h4>47</h4></div>
+                            <div><span class="label">Status </span><h4>Delivered</h4></div>
                         </div>
                         
                         <div class="btn-group save-bookmark">
@@ -100,48 +290,243 @@
             
             <div class="row result-main">
                 <div class="container">
-                
                     <div class="row result-row">
+                    
+                        <!-- Picto du statut de la commande. Toujours à gauche de la ligne -->
                         <div class="col-xs-24 col-sm-1">
                             <img src="css/svg/majorstep/client_orders.svg" alt="default step" class="pull-left step"/>
                         </div>
-                        <div class="row col-xs-24 col-sm-23">
-                            <span class="clearfix col-xs-24 id">0007374309</span>                           
-                            <p class="pull-left result-col col-xs-24 col-sm-6">
-                                <span class="clearfix">Geodis order ID <strong>00280559</strong></span>
-                                <span class="clearfix">Created on <strong>2016/02/10 07:43</strong></span>
-                                <span class="clearfix">By <strong>Nestlé HealthSciences</strong></span>
-                            </p>
-                            <p class="pull-left result-col col-xs-24 col-sm-5">
-                                <span class="clearfix">To <strong>Pharmacie d'Aquitaine</strong></span>
-                                <span class="clearfix">France/47400/Tonneins</span>
-                            </p>
-                            <p class="pull-left result-col col-xs-24 col-sm-4">
-                                <span class="clearfix"><strong>4</strong></span>
-                                <span class="clearfix">Operations</span>
-                            </p>
-                            <p class="pull-left result-col col-xs-24 col-sm-5">
-                                <span class="clearfix"><strong>Closed</strong></span>
-                                <span class="clearfix">2016/03/08 09:27</span>
-                            </p>                
-                            <div class="col-xs-24 col-sm-4">
-                                <div class="btn-group details">
-                                  <button type="button" class="btn btn-default">Details</button>
-                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="caret"></span>
-                                    <span class="sr-only">Toggle Dropdown</span>
-                                  </button>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="#">Events</a></li>
-                                    <li><a href="#">Contents</a></li>
-                                    <li><a href="#">Export</a></li>
-                                  </ul>
-                                </div>
+                        
+                        <div class="row col-xs-24 col-sm-21">                            
+                            
+                            <!-- Numéro de la commande -->
+                            <span class="id col-xs-24">0007374309</span>
+                            
+                            <!-- Références de la commande -->
+                            <div class="reference col-sm-6">
+                                <span class="label">Geodis order ID </span><strong>00280559</strong>
+                                <span class="label">Created on </span><strong>2016/02/10 07:43</strong><br>
+                                <span class="label">By </span><strong>Nestlé HealthSciences</strong>
                             </div>
+                            
+                            <!-- Details de la commande -->
+                            <ul class="details col-sm-18">
+                                <li class="item detail-item address">
+                                    <div class="to">
+                                        <span class="label">To</span>
+                                        <span class="title">PHARMACIE D'AQUITAINE</span>
+                                        <span class="location">France/47400/Tonneins</span>
+                                    </div>
+                                </li>
+                                <li class="item detail-item">
+                                    <span class="clearfix"><strong>4</strong></span>
+                                    <span class="label">Operations</span>                    
+                                </li>
+                                <li class="item detail-item">
+                                    <span class="clearfix"><strong>Closed</strong></span>
+                                    <span class="clearfix">2016/03/08 09:27</span>                             
+                                </li>                              
+                            </ul>
                         </div>
+                        
+                        <!-- Boutons d'action de la commande. Toujours à droite de la ligne -->
+                        <div class="btn-result col-xs-24 col-sm-2">
+                            <div class="btn-group details">
+                              <button type="button" class="btn btn-default">Details</button>
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Contents</a></li>
+                                <li><a href="#">Export</a></li>
+                              </ul>
+                            </div>
+                        </div>                                                     
+   
+                    </div>     
+
+                    <div class="row result-row">
+                    
+                        <!-- Picto du statut de la commande. Toujours à gauche de la ligne -->
+                        <div class="col-xs-24 col-sm-1">
+                            <img src="css/svg/majorstep/client_orders.svg" alt="default step" class="pull-left step"/>
+                        </div>
+                        
+                        <div class="row col-xs-24 col-sm-21">                            
+                            
+                            <!-- Numéro de la commande -->
+                            <span class="id col-xs-24">00287624</span>
+                            
+                            <!-- Références de la commande -->
+                            <div class="reference col-sm-6">
+                                <span class="label">Carrier Shipment ID </span>
+                                <h4>9900050014723</h4>
+                                <span class="label">Parent ID </span>
+                                <h4>0007312345</h4>
+                            </div>
+                            
+                            <!-- Details de la commande -->
+                            <ul class="details col-sm-18">
+                                <li class="item detail-item address">
+                                    <div class="from">
+                                        <span class="label">From</span>
+                                        <h4>Geodis SOA3</h4>
+                                        <span class="location">France/95310/Saint-Ouen-l’Aumone</span>
+                                    </div>
+                                    <div class="to">
+                                        <span class="label">To</span>
+                                        <h4>PHARMACIE D'AQUITAINE</h4>
+                                        <span class="location">France/47400/Tonneins</span>
+                                    </div>
+                                </li>
+                                <li class="units item detail-item">
+                                    <h4>2</h4>
+                                    <span class="clearfix label">Handling Units</span>                    
+                                </li>
+                                <li class="weights item detail-item">
+                                    <span class="clearfix">11,2 Kgs</span>
+                                    <span class="clearfix">2016/03/08 09:27</span>                             
+                                </li>
+                                <li class="number item detail-item">
+                                    <div>
+                                        <span class="label">Batch Number
+                                        <h4>50220835F1</h4>
+                                    </div>
+                                    <div>
+                                        <span class="label">Serial Number</span>
+                                        <h4>-</h4>                     
+                                    </div>
+                                </li>
+                                </li>
+                                <li class="status item detail-item">
+                                    <h4>Delivered</h4>
+                                    <span class="clearfix">2016/03/08 09:27</span>                             
+                                </li>                                 
+                            </ul>
+                        </div>
+                        
+                        <!-- Boutons d'action de la commande. Toujours à droite de la ligne -->
+                        <div class="btn-result col-xs-24 col-sm-2">
+                            <div class="btn-group details">
+                              <button type="button" class="btn btn-default">Details</button>
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Contents</a></li>
+                                <li><a href="#">Export</a></li>
+                              </ul>
+                            </div>
+                        </div>                                                     
+   
+                    </div>                     
+                    
+                    <div class="row result-row">
+                    
+                        <!-- Picto du statut de la commande. Toujours à gauche de la ligne -->
+                        <div class="col-xs-24 col-sm-1">
+                            <img src="css/svg/majorstep/client_orders.svg" alt="default step" class="pull-left step"/>
+                        </div>
+                        
+                        <div class="row col-xs-24 col-sm-21">                            
+                            
+                            <!-- Numéro de la commande -->
+                            <span class="id col-xs-24">12282205</span>
+                            
+                            <!-- Références de la commande -->
+                            <div class="reference col-sm-6">
+                                <span class="label">Geodis order ID </span>
+                                <h4>0007374309</h4>
+                                <span class="label">Parent ID </span>
+                                <h4>14990872</h4>
+                            </div>
+                            
+                            <!-- Details de la commande -->
+                            <ul class="details col-sm-18">
+                                <li class="item detail-item">
+                                    <span class="clearfix">CLNTN DSRT HPHC Van LPPR - (4x205g)</span>                           
+                                </li>
+                                <li class="units item detail-item">
+                                    <h4>2</h4>
+                                    <span class="clearfix label">Handling Units</span>                    
+                                </li>
+                                <li class="number item detail-item">
+                                    <div>
+                                        <span class="label">Batch Number
+                                        <h4>50220835F1</h4>
+                                    </div>
+                                    <div>
+                                        <span class="label">Serial Number</span>
+                                        <h4>-</h4>                     
+                                    </div>
+                                </li>
+                                <li class="status item detail-item">
+                                    <h4>Delivered</h4>
+                                    <span class="clearfix">2016/03/08 09:27</span>                             
+                                </li>                             
+                            </ul>
+                        </div>
+                        
+                        <!-- Boutons d'action de la commande. Toujours à droite de la ligne -->
+                        <div class="btn-result col-xs-24 col-sm-2">
+                            <div class="btn-group details">
+                              <button type="button" class="btn btn-default">Details</button>
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Contents</a></li>
+                                <li><a href="#">Export</a></li>
+                              </ul>
+                            </div>
+                        </div>                                                     
+   
+                    </div>
+
+                    
+                
+            
+                    <div class="row result-row">                                                                      
+                        <div class="id col-sm-6">
+                            <span class="label">Batch number ID :</span>
+                            <h4>0007374309</h4>
+                        </div>                        
+                        <div class="id col-sm-6">
+                            <span class="label">Qty. Units :</span>
+                            <h4>3</h4>
+                        </div>
+                        <div class="id col-sm-6">
+                            <span class="label">SKU ID : </span>
+                            <h4>
+                                <a href="#" title="sku id">0007374309</a>
+                            </h4>
+                        </div>                          
                     </div>
                     
-                </div>
+                    <div class="row result-row">                                                                      
+                        <div class="id col-sm-6">
+                            <span class="label">Batch number ID :</span>
+                            <h4>0007374309</h4>
+                        </div>                        
+                        <div class="id col-sm-6">
+                            <span class="label">Qty. Units :</span>
+                            <h4>3</h4>
+                        </div>
+                        <div class="id col-sm-6">
+                            <span class="label">SKU ID : </span>
+                            <h4>
+                                <a href="#" title="sku id">0007374309</a>
+                            </h4>
+                        </div>                           
+                    </div>                    
+                    
+                </div>        
             </div>
             
         </div>

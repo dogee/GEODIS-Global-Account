@@ -67,6 +67,9 @@ form#signin-bloc {
 }
 #workspaces-tiles {
     margin-top: 30px;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
 }
 #workspaces-head h4 {
     margin-bottom: 0;
@@ -95,7 +98,10 @@ form#signin-bloc {
     width: 65px;
     height: 65px;
 }
-#workspaces-tiles .col-xs-12 .link {
+#workspaces-tiles > div {
+    margin-bottom: 20px;
+}
+#workspaces-tiles .col-xs-24 .link {
     width: 100%;
     margin-bottom: 15px;
 }

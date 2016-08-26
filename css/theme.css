@@ -24,6 +24,161 @@ Date : 02/08/2016
 .navbar-brand>img {
     height: 45px;
 }
+.navbar {
+    z-index: -999;
+}
+
+/* Main menu */
+.inapp .mm-listview .mm-next::before {
+	display: none;
+}
+.inapp .mm-panels>.mm-panel>.mm-listview:first-child, .inapp .mm-panels>.mm-panel>.mm-navbar+.mm-listview {
+    margin-top: 0px;
+}
+.inapp .mm-menu .mm-divider {
+    height: 40px;
+    background: none;
+}
+#menu .mm-listview>li.workspace {
+    padding: 12px 0;
+}
+#menu .mm-listview .description {
+    color: #444;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    padding: 0 0 10px 20px;
+}
+#menu .mm-listview.dashboard a, #menu .mm-listview .workspace a {
+    padding-bottom: 0;
+}
+#menu .mm-listview a {
+    color: #000;
+}
+#menu .mm-listview a .title {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    display: block;
+}
+#menu .mm-listview li a:hover {
+    background-color: transparent;
+}
+#menu .mm-listview li.workspace:hover a .title, #menu .mm-listview li a:hover {
+    color: #3200e6;
+}
+#menu .mm-listview li.workspace:hover:after, #menu .mm-listview.dashboard li:hover:after {
+    border-bottom-color: #3200e6;
+}
+#menu .mm-listview li:after {
+    border: 0;
+}
+#menu .mm-listview li.workspace:after, #menu .mm-listview.dashboard li:after {
+    border-bottom-color: #000;
+    right: 20px;
+    border: 1px solid;
+}
+#menu .mm-listview.dashboard li {
+    padding: 5px 0 15px;
+}
+#menu .mm-listview img {
+    width: 40px;
+    height: 40px;
+    margin: 8px 0 5px 20px;
+    float: left;
+}
+#menu .mm-listview.dashboard img {
+    width: 383px;
+    height: auto;
+    border: 1px solid #ddd;
+    float: none;
+}
+.inapp .mm-menu.mm-columns .mm-panels > .mm-panel.mm-opened {
+	border-right: 0;
+}
+.inapp .mm-panels #my-list {
+	padding-top: 60px;
+}
+.inapp .mm-listview > li:not(.mm-divider)::after {
+	border-bottom-color: #000;
+}
+.inapp .mm-navbar {
+    border-bottom: 3px solid #000;
+    margin: 0 20px;
+    height: 70px;
+    line-height: 45px;
+}
+.inapp .mm-btn {
+    height: 65px;
+}
+.inapp .mm-panels > .mm-panel.mm-hasnavbar {
+    padding-top: 60px;
+}
+.inapp .mm-menu {
+    background: #fff;
+}
+.inapp .mm-menu .mm-navbar a, .inapp .mm-menu .mm-navbar > * {
+    color: #000 !important;
+    font-size: 1.7em;
+    text-transform: uppercase;
+}
+.inapp .mm-menu .mm-selected {
+	background-color: transparent !important;
+}
+.inapp .mm-selected  a, .mm-selected + a {
+    color: #3200e6 !important;
+}
+.inapp .mm-menu .mm-selected::after {
+    background: url(svg/arrow_next_selected.svg);
+}
+.inapp .mm-arrow::after, .inapp .mm-next::after, .inapp .mm-prev::before {
+	display: block;
+	text-indent: -9999px;
+	width: 29px;
+	height: 21px;
+	background: url(svg/arrow_next.svg);
+	background-size: 29px 21px;
+	transform: none;
+	-webkit-transform: none;
+	-ms-transform: none;
+	border: 0;
+}
+.inapp .mm-next::after {
+	background: url(svg/arrow_next.svg);
+}
+.inapp .mm-prev::before {
+	background: url(svg/arrow_back_black.svg);
+}
+
+#menu::before, #mm-menu::before, #profil::before, #mm-profil::before {
+	content: '';
+	width: 60px !important;
+	height: 100%;
+	color: #000 !important;
+	display: block;
+	position: absolute !important;
+	left: -60px;
+	cursor: pointer;
+	/* background-color: rgba(94,108,159,0.9); */
+	background-image: url(svg/croixblanche.svg);
+	background-size: 35px 35px;
+	background-repeat: no-repeat;
+	background-position: top 20px center;
+}
+.inapp .mm-prev::before {
+    left: 0 !important;
+}
+html.mm-pagedim-black #mm-blocker {
+    background: rgba(0,40,120,0.9) !important;
+    opacity: 1 !important;
+}
+
+
+@media screen and (min-width: 1160px) {
+  #mm-menu, #mm-profil {display: none !important;}
+}
+@media screen and (max-width: 1160px) {
+  #menu, #profil {display: none !important;}
+}
+
 
 /* Main */
 main {

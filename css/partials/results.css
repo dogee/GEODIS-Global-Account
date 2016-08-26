@@ -8,12 +8,7 @@ Date : 04/08/2016
 
 
 /* Common */
-.results span strong {
-    color: #000;
-}
-.results main span {
-    color: #999;
-}
+
 
 /* Header */
 .result-header {
@@ -39,8 +34,9 @@ Date : 04/08/2016
 }
 .back-button img, .search-button img {
     width: 30px;
+    margin-top: 4px;
 }
-.result-title span {
+.result-title span, .result-title h4 {
     font-style: italic;
 }
 .profil a {
@@ -69,12 +65,13 @@ Date : 04/08/2016
 
 /* Main */
 .result-row {
-    padding: 25px 0 15px;
+    padding: 15px 0;
     border-bottom: 1px solid #ccc;
 }
 .result-row .btn-group {
     position: absolute;
     right: 0;
+    top: 21px;
 }
 .result-row .step {
     width: 25px;
@@ -84,4 +81,48 @@ Date : 04/08/2016
     font-size: 1.1em;
     font-weight: bold;
 }
-
+.result-row .details {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+}
+.result-row .details:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.result-row .detail-item {
+    float: left;
+    min-height: 60px;
+}
+.result-row .details .item {
+    margin: 0 30px 25px 0;
+}
+.results .address .to .label {
+    text-indent: 18px;
+    display: inline-block;
+}
+.results .label {
+    font-size: 1em;
+    font-weight: normal;
+    color: #999;
+    padding: 0 .4em 0 0;
+}
+.results .address .location {
+    display: block;
+    text-indent: 43px;
+}
+.results .address .title {
+    font-weight: bold;
+    color: #000;
+}
+.results h4 {
+    margin: 0;
+    color: #000;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    display: inline-block;
+}

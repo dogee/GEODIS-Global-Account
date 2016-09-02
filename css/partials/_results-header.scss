@@ -1,0 +1,37 @@
+/*
+Title : Result header
+*/
+
+
+.result-header {
+    background-color: #EBEBEB;
+    border-bottom: 1px solid #706A7B;
+    min-height: 150px;
+    padding: 30px 0;
+}
+.save-bookmark {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+.search-button {
+    position: absolute;
+    right: 30px;
+}
+.result-header .container {
+    position: relative;
+}
+.result-header h1 {
+    margin: 0;
+}
+.back-button img {
+    width: 30px;
+    margin-top: 8px;
+}
+.search-button img {
+    width: 30px;
+    margin-top: 4px;
+}
+.result-title span, .result-title h4 {
+    font-style: italic;
+}

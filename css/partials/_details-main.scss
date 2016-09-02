@@ -1,0 +1,131 @@
+/*
+Title : Main content of the detail page
+*/
+
+
+.details-main {
+    .container {
+        position: relative;
+    }
+    .tabs {
+        margin-top: 50px;
+    }
+    .tools {
+        position: absolute;
+        right: 0;
+        top: 0;
+    
+        .btn {
+            background-size: 18px !important;
+            text-indent: -9999px;
+            border: none;
+            margin: 40px -4px 0 10px;
+            padding: 6px 16px;
+            vertical-align: top;
+            
+            &:hover {
+                background-color: $geodisblue !important;
+            }
+        }
+        .download {
+            background: #d8d8d8 url(./svg/telecharger_gris.svg) no-repeat center center;
+            
+            &:hover {
+                background: url(./svg/telecharger_blanc.svg) no-repeat center center;
+            }
+        }
+        .showmap {
+            background: #d8d8d8 url(./svg/geolocaliser_gris.svg) no-repeat center center;
+            
+            &:hover {
+                background: url(./svg/geolocaliser_blanc.svg) no-repeat center center;
+            }
+        } 
+        .map {
+            width: 389px;
+            height: 345px;
+            background: url(./img/map.jpg) no-repeat center center;
+            display: inline-block;
+        }
+        
+    }
+    .data {
+        h1 {
+            margin: 30px 0;
+        }
+        .reference {
+            .reference-row {
+                border-bottom: 1px solid $ef;
+                line-height: 2.4;
+                
+                &:last-child {
+                    border: 0;
+                }
+                
+                h4 {
+                    float: right;
+                    margin: 9px 0;
+                }
+            }
+        }
+        a.lastevent {
+            border: 1px solid $ef;
+            padding: 15px 25px;
+            width: 100%;
+            margin-top: 10px;
+            display: block;
+            text-decoration: none;
+            background: url(./svg/rond_chevron.svg) no-repeat center right 15px;
+            background-size: 25px;
+            
+            .date {
+                color: #555;
+            }
+            .status {
+                color:$geodisblue;
+                font-size:16px;
+            }
+            
+            * {
+                display: block;
+                text-align: left;
+                line-height: 1.2;
+                margin-left: 25px;
+            }
+            
+            &:before {
+                content: "";
+                background: url(./svg/eclair.svg) no-repeat top left;
+                background-size: 15px;
+                width: 20px;
+                height: 25px;
+                position: absolute;
+            }
+            
+            &:hover {
+                border: 1px solid $geodisblue;
+                background: url(./svg/rond_chevron_blanc.svg) no-repeat center right 15px;
+                background-size: 25px;
+            }
+        }
+        
+        .origin {
+            border-bottom: 1px solid #efefef;
+            background: url(./svg/origin_gris.svg) no-repeat top 15px left 5px;
+            background-size: 20px;
+        }
+        .destination {
+            background: url(./svg/destination_gris.svg) no-repeat top 15px left 5px;
+            background-size: 20px;
+        }        
+        .origin, .destination {
+            padding: 15px 15px 15px 40px;
+            
+            .localisation span {
+                display: block;
+                text-transform: uppercase;
+            }
+        }
+        
+    }
+}

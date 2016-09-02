@@ -1,0 +1,38 @@
+/*
+Title : Header of the detail page
+*/
+
+
+.details-header {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    border-bottom: 1px solid #d8d8d8;
+    
+    &> .container {
+        position: relative;
+    }
+    
+    #breadcrumb {
+        display: inline-block;
+        margin-left: 20px;
+        
+        .breadcrumb-entry {
+            display: inline-block;
+            
+            .label {
+                display: block;
+                text-align: left;
+            }
+            h4 {
+                font-size: 1.23em;
+            }
+            
+            &+ .breadcrumb-entry {
+                background: url(./svg/chevron_droit.svg) no-repeat left 15px top 5px;
+                background-size: 25px 28px;
+                padding: 0 0 0 55px;
+            }
+        }
+    }
+    
+}

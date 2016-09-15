@@ -1,0 +1,26 @@
+/*
+Title : Search
+*/
+.search {
+  background-color: #f4f4f4; }
+  .search .search-button {
+    position: absolute;
+    right: 30px;
+    top: 13px; }
+  .search .details-header {
+    padding: 10px 0 90px;
+    border-bottom: 1px solid #6F6E6E; }
+  .search .details-main {
+    margin-top: -61px; }
+    .search .details-main .tabs {
+      margin-top: 0; }
+      .search .details-main .tabs .nav-tabs {
+        border-bottom: none; }
+        .search .details-main .tabs .nav-tabs > li > a {
+          padding: 19px 30px 18px; }
+        .search .details-main .tabs .nav-tabs > li.active > a, .search .details-main .tabs .nav-tabs > li.active > a:focus, .search .details-main .tabs .nav-tabs > li.active > a:hover {
+          background-color: transparent; }
+        .search .details-main .tabs .nav-tabs > li > a:hover {
+          background-color: transparent; }
+
+/*# sourceMappingURL=search.css.map */

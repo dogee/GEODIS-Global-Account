@@ -142,7 +142,7 @@ Title : Header
   height: 45px; }
 
 .navbar {
-  z-index: -999; }
+  z-index: 1; }
 
 .profil a {
   background: url(./svg/profil_blanc.svg) center left 30px no-repeat;
@@ -471,5 +471,84 @@ footer {
 #copyright {
   display: block;
   font-size: 0.7em; }
+
+/*
+Title : Search
+*/
+.search {
+  background-color: #f4f4f4; }
+  .search .search-button {
+    position: absolute;
+    right: 30px;
+    top: 13px; }
+  .search .details-header {
+    padding: 10px 0 90px;
+    border-bottom: 1px solid #6F6E6E; }
+  .search .details-main {
+    margin-top: -61px; }
+    .search .details-main .tabs {
+      margin-top: 0; }
+      .search .details-main .tabs .nav-tabs {
+        border-bottom: none; }
+        .search .details-main .tabs .nav-tabs > li > a {
+          padding: 19px 30px 18px; }
+        .search .details-main .tabs .nav-tabs > li.active > a, .search .details-main .tabs .nav-tabs > li.active > a:focus, .search .details-main .tabs .nav-tabs > li.active > a:hover {
+          background-color: transparent; }
+        .search .details-main .tabs .nav-tabs > li > a:hover {
+          background-color: transparent; }
+      .search .details-main .tabs form {
+        margin: 40px 0; }
+        .search .details-main .tabs form #ddobjectype {
+          width: 300px; }
+        .search .details-main .tabs form .dropdown-toggle {
+          padding-right: 30px;
+          position: relative;
+          font-weight: bold;
+          color: #000;
+          min-width: 100px; }
+        .search .details-main .tabs form .msl .dropdown-toggle {
+          margin-right: 20px;
+          background-color: #fff; }
+        .search .details-main .tabs form .input-group-btn .dropdown-toggle {
+          margin-right: 0 !important; }
+        .search .details-main .tabs form label {
+          min-width: 100px;
+          text-align: right; }
+          .search .details-main .tabs form label[for=ddlob] {
+            min-width: 0; }
+        .search .details-main .tabs form .advancedsearch {
+          margin: 25px 0; }
+          .search .details-main .tabs form .advancedsearch a {
+            font-size: 1.1em;
+            text-decoration: none;
+            font-weight: bold; }
+        .search .details-main .tabs form .btn {
+          margin-right: 5px; }
+        .search .details-main .tabs form .caret {
+          position: absolute;
+          right: 7px;
+          top: 9px;
+          background: url(./svg/chevron_bas.svg) no-repeat center center;
+          background-size: 12px 12px;
+          width: 15px;
+          height: 15px;
+          border: none; }
+        .search .details-main .tabs form .form-validation {
+          margin-top: 40px; }
+
+/*
+Title : Forms
+*/
+form label {
+  text-transform: uppercase;
+  color: #888;
+  margin-right: 5px; }
+form .form-inline {
+  margin: 20px 0; }
+form .input-group .form-control {
+  z-index: 0 !important; }
+form .form-control, form .dropdown-toggle {
+  border: 1px solid #ddd;
+  box-shadow: inset 0 0 2px 0px #ddd; }
 
 /*# sourceMappingURL=theme.css.map */

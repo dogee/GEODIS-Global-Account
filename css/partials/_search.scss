@@ -1,0 +1,105 @@
+/*
+Title : Search
+*/
+
+
+.search {
+    background-color: #f4f4f4;
+    
+    .search-button {
+        position: absolute;
+        right: 30px;
+        top: 13px;
+    }
+    
+    .details-header {
+        padding: 10px 0 90px;
+        border-bottom: 1px solid #6F6E6E;
+    }   
+    
+    .details-main {
+        margin-top: -61px;
+        
+        .tabs {
+            margin-top: 0;
+            
+            .nav-tabs {
+                border-bottom: none;
+                
+                & > li > a {
+                    padding: 19px 30px 18px;
+                }
+                
+                & > li.active > a, & > li.active > a:focus, & > li.active > a:hover {
+                    background-color: transparent;
+                }
+                
+                & > li > a:hover {
+                    background-color: transparent;
+                }
+            }
+            
+            form {
+                margin: 40px 0;
+                
+                #ddobjectype {
+                    width: 300px;
+                    
+                }
+                
+                .dropdown-toggle {
+                    padding-right: 30px;
+                    position: relative;
+                    font-weight: bold;
+                    color: #000;
+                    min-width: 100px;
+                }
+                .msl .dropdown-toggle {
+                    margin-right: 20px;
+                    background-color: #fff;
+                }
+                .input-group-btn .dropdown-toggle {
+                    margin-right: 0 !important;
+                }
+                
+                label {
+                    min-width: 100px;
+                    text-align: right;
+                    
+                    &[for=ddlob] {
+                        min-width: 0;
+                    }
+                }
+                
+                .advancedsearch {
+                    margin: 25px 0;
+                    
+                    a {
+                        font-size: 1.1em;
+                        text-decoration: none;
+                        font-weight: bold
+                    }
+                }
+                
+                .btn {
+                    margin-right: 5px;
+                }
+                
+                .caret {
+                    position: absolute;
+                    right: 7px;
+                    top: 9px;
+                    background: url(./svg/chevron_bas.svg) no-repeat center center;
+                    background-size: 12px 12px;
+                    width: 15px;
+                    height: 15px;
+                    border: none;
+                }
+                
+                .form-validation {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+/*
+Title : Forms
+*/
+
+
+form {
+    label {
+        text-transform: uppercase;
+        color: #888;
+        margin-right: 5px;
+    }
+    
+    .form-inline {
+        margin: 20px 0;
+    }
+    
+    .input-group .form-control {
+        z-index: 0 !important;
+    }
+    
+    .form-control, .dropdown-toggle {
+        border: 1px solid #ddd;
+        box-shadow: inset 0 0 2px 0px #ddd;
+    }
+}

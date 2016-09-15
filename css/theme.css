@@ -18,6 +18,32 @@ Title : Main
 .btn-group .btn + .btn {
   margin-left: 2px; }
 
+/* 5 columns layout */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px; }
+
+.col-xs-15 {
+  width: 20%;
+  float: left; }
+
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left; } }
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left; } }
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left; } }
 /* Main */
 main {
   margin-top: 70px; }
@@ -550,5 +576,33 @@ form .input-group .form-control {
 form .form-control, form .dropdown-toggle {
   border: 1px solid #ddd;
   box-shadow: inset 0 0 2px 0px #ddd; }
+
+/*
+Title : Home
+*/
+body {
+  background-color: #F2F2F2; }
+
+.home .quick-menu {
+  padding: 30px 0;
+  border-bottom: 1px solid #d8d8d8; }
+  .home .quick-menu .item {
+    background-color: #fff;
+    padding: 12px;
+    box-shadow: 0px 1px 3px 0 #bbb;
+    display: block;
+    margin-bottom: 30px; }
+    .home .quick-menu .item:hover {
+      box-shadow: 0px 2px 5px 0 #bbb;
+      text-decoration: blink; }
+    .home .quick-menu .item img {
+      width: 40px;
+      height: 40px; }
+    .home .quick-menu .item h3 {
+      text-transform: uppercase;
+      margin: 12px 0 0;
+      font-size: 1.3em; }
+    .home .quick-menu .item .subtitle {
+      color: #d8d8d8; }
 
 /*# sourceMappingURL=theme.css.map */

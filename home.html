@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Include jQuery.mmenu .css files -->
+    <link type="text/css" href="css/vendor/jquery.mmenu.all.css" rel="stylesheet" />
+    <!-- Include jQuery and the jQuery.mmenu .js files -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mmenu.all.min.js"></script>
+    
+
+    <script>
+        jQuery(document).ready(function($){  
+          
+          $("#menu").mmenu({
+            // options
+            "setSelected": {
+              "hover": true,
+              "parent": true
+            },
+            "navbar": {
+                "add": true,
+                "title": "test"
+            },
+            "currentItem": {
+                "find": true
+            },
+            "offCanvas": {
+              "position": "right",
+              "zposition": "front",
+              "pageSelector": ".results"
+            },
+            "extensions": [
+              "pagedim-black",
+              "multiline"
+            ]
+          },
+          {
+            // configuration
+            clone: true
+          });
+
+          
+          $("#menu").mmenu({
+            "setSelected": {
+                "hover": true,
+                "parent": true
+            },
+            "navbar": {
+                "title": ""
+            },
+            "columns": {
+              "add": true,
+              "visible": {
+                "max": 5,
+                "min": 1
+              }
+            },
+            "offCanvas": {
+              "position": "right",
+              "zposition": "front",
+              "pageSelector": ".results"
+            },
+            "extensions": [
+              "pagedim-black",
+              "multiline"
+            ]
+          });
+
+          $("#profil").mmenu({
+            "offCanvas": {
+              "position": "right",
+              "zposition": "front",
+              "pageSelector": ".results"
+            },
+            "extensions": [
+              "pagedim-black",
+              "multiline"
+            ]
+          }); 
+
+
+            
+            
+            /* TopNav Desktop */
+            var myMenu = $("#menu");
+            // initialize mmenu API
+            var myMenuAPI = myMenu.data( "mmenu" );
+            // function to set to specific subMenu
+            function setMMenu(subMenu) {
+              // set to subMenu
+              var current = myMenu.find(subMenu);
+              // myMenuAPI.setSelected(current.first());
+              myMenuAPI.openPanel(current.closest(".mm-panel")); 
+            }
+            // function to open mmmenu to specific subMenu
+            function openMMenu() {
+              myMenuAPI.open();
+            }
+            // function to close mmmenu to specific subMenu
+            function closeMMenu() {
+              myMenuAPI.close();
+            }		
+
+        
+            /* TopNav Mobile */
+            var myMenuM = $("#mm-menu");
+            // initialize mmenu API
+            var myMenuAPIM = myMenuM.data( "mmenu" );
+            // function to set to specific subMenu
+            function setMMenuM(subMenu) {
+              // set to subMenu
+              var current = myMenuM.find(subMenu);
+              // myMenuAPI.setSelected(current.first());
+              myMenuAPIM.openPanel(current.closest(".mm-panel")); 
+            }
+            // function to open mmmenu to specific subMenu
+            function openMMenuM() {
+              myMenuAPIM.open();
+            }
+            function closeMMenuM() {
+              myMenuAPIM.close();
+            }			
+
+
+            /* TopNav Desktop */
+            var myMenu = $("#menu");
+            // initialize mmenu API
+            var myMenuAPI = myMenu.data( "mmenu" );
+            // function to set to specific subMenu
+            function setMMenu(subMenu) {
+              // set to subMenu
+              var current = myMenu.find(subMenu);
+              // myMenuAPI.setSelected(current.first());
+              myMenuAPI.openPanel(current.closest(".mm-panel")); 
+            }
+            // function to open mmmenu to specific subMenu
+            function openMMenu() {
+              myMenuAPI.open();
+            }
+            // function to close mmmenu to specific subMenu
+            function closeMMenu() {
+              myMenuAPI.close();
+            }	
+            
+            
+            /* Close menu from blue zone */
+            $( "#menu, #mm-menu, #profil, #mm-profil" ).click(function(e) {	
+                if ($(this).hasClass('mm-opened') && e.offsetX < 0) {
+                    closeMMenu();
+                    closeMMenuM();
+                    //$( "body" ).trigger( "click" );
+                }
+            });
+            
+            
+            /* Show/hide the map */
+            $(document).ready(function(){
+                $(".showmap").click(function(){
+                    $(".map").animate({
+                        width: "toggle"
+                    });
+                });
+            });
+            
+            
+            /* For Dropdown button */
+            $(".dropdown-menu li a").click(function(){
+              var selText = $(this).text();
+              $(this).parents('.btn-input').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+            });
+
+          
+       });
+    </script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!--[endif]---->
+  </head>
+
+  <body class="inapp home">
+      
+      <header class="text-center">      
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+          
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img src="css/svg/logo_geodis.svg" id="logo" alt="Logo Geodis"/>
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+              <ul class="nav navbar-nav navbar-right">
+                <li class="profil">
+                    <a href="#profil">
+                        <span class="name">Gilles</span>
+                        <span class="company">Nestle HealthSciences</span>
+                    </a>
+                </li>
+                <li class="burger">
+                    <a href="#menu">
+                        <span class="title">menu</span>
+                    </a>
+                </li>
+              </ul>
+            
+          </div><!-- /.container-fluid -->
+        </nav>        
+      </header>
+      
+      
+      <!-- Le menu principal -->
+      <nav id="menu">
+         <ul>
+            <li class="workspace">
+                <img src="css/svg/menu/track_and_trace.svg" alt="track&trace picto" />
+                <a href="#"><span class="title">track & trace</span></a>
+                <span class="description">Track your shipment</span>                
+            </li>
+            <li class="workspace">
+                <img src="css/svg/menu/business_processes.svg" alt="track&trace picto" />
+                <a href="#"><span class="title">business processes</span></a>
+                <span class="description">Business Processes Management</span>
+            </li>
+            <li class="workspace">
+                <img src="css/svg/menu/dashboard.svg" alt="track&trace picto" />
+                <a href="#"><span class="title">Dashboard</span></a>
+                <span class="description">Analytics and Dashboard</span>
+                <ul class="dashboard">
+                    <li>
+                        <img src="css/svg/image_dashboard_1.jpg" alt="dashboard thumbnail" />
+                        <a href="#"><span class="title">Dashboard 1</span></a>
+                    </li>
+                    <li>
+                        <img src="css/svg/image_dashboard_2.jpg" alt="dashboard thumbnail" />
+                        <a href="#"><span class="title">Dashboard 2</span></a>
+                    </li>
+                    <li><a href="#"><span class="title">Dashboard 3</span></a></li>
+                </ul>                
+            </li>                        
+            <li class="workspace">
+                <img src="css/svg/menu/document.svg" alt="track&trace picto" />
+                <a href="#"><span class="title">documents</span></a>
+                <span class="description">Documents Management</span>
+            </li>
+            <li class="workspace">
+                <img src="css/svg/menu/warehouse_sights.svg" alt="track&trace picto" />
+                <a href="#"><span class="title">warehouse sights</span></a>
+                <span class="description">Stock Visibility</span>
+            </li>            
+            <li class="Divider"></li>
+            <li><a href="/contact">Geodis News</a></li>
+            <li><a href="/contact">Legal Information</a></li>
+         </ul>
+      </nav>
+      
+      <!-- Le menu de profil -->
+      <nav id="profil">
+         <ul>
+            <li>
+                <a href="/">Switch domain</a>
+                <ul>
+                    <li><a href="/contact">Domain 1</a></li>
+                    <li><a href="/contact">Domain 1</a></li>
+                    <li><a href="/contact">Domain 1</a></li>
+                    <li><a href="/contact">Domain 1</a></li>
+                </ul>
+            </li>
+            <li><a href="/contact">Sign out</a></li>
+         </ul>
+      </nav>      
+
+      
+      
+      <main>
+        <div class="container-fluid">
+        
+            <div class="row notifications">
+            </div>
+        
+        </div>
+        
+        <div class="container">
+            <div class="row quick-menu">
+            
+                <div class="col-md-15">
+                    <a href="#" title="" class="item">
+                        <img src="css/svg/menu/track_and_trace.svg" alt="track&trace" />
+                        <h3>Track & Trace</h3>
+                        <span class="subtitle">Track your shipment</span>
+                    </a>
+                </div>
+                <div class="col-md-15">
+                    <a href="#" title="" class="item">
+                        <img src="css/svg/menu/track_and_trace.svg" alt="track&trace" />
+                        <h3>Track & Trace</h3>
+                        <span class="subtitle">Track your shipment</span>
+                    </a>
+                </div>
+                <div class="col-md-15">
+                    <a href="#" title="" class="item">
+                        <img src="css/svg/menu/track_and_trace.svg" alt="track&trace" />
+                        <h3>Track & Trace</h3>
+                        <span class="subtitle">Track your shipment</span>
+                    </a>
+                </div>
+                <div class="col-md-15">
+                    <a href="#" title="" class="item">
+                        <img src="css/svg/menu/track_and_trace.svg" alt="track&trace" />
+                        <h3>Track & Trace</h3>
+                        <span class="subtitle">Track your shipment</span>
+                    </a>
+                </div>
+                <div class="col-md-15">
+                    <a href="#" title="" class="item">
+                        <img src="css/svg/menu/track_and_trace.svg" alt="track&trace" />
+                        <h3>Track & Trace</h3>
+                        <span class="subtitle">Track your shipment</span>
+                    </a>
+                </div>                
+            
+            </div>
+            
+        </div>
+      </main>
+      
+      <footer class="text-center">
+        <span id="slogan">We logistic your growth</span>
+        <span id="copyright">@ 2016 GEODIS All right reserved - Legal information</span>
+      </footer>
+      
+  </body>
+  
+</html>

@@ -1,0 +1,41 @@
+/*
+Title : Home
+*/
+
+
+body {
+    background-color: #F2F2F2;    
+}
+
+.home {
+    .quick-menu {
+        padding: 30px 0;
+        border-bottom: 1px solid #d8d8d8;
+            
+        .item {
+            background-color: #fff;
+            padding: 12px;
+            box-shadow: 0px 1px 3px 0 #bbb;
+            display: block;
+            margin-bottom: 30px;
+            
+            &:hover {
+                box-shadow: 0px 2px 5px 0 #bbb;
+                text-decoration: blink;
+            }
+        
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            h3 {
+                text-transform: uppercase;
+                margin: 12px 0 0;
+                font-size: 1.3em;
+            }
+            .subtitle {
+                color: #d8d8d8;
+            }
+        }
+    }
+}    

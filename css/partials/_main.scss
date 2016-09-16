@@ -47,6 +47,16 @@ Title : Main
 }
 
 
+/* Box Shadows */
+@mixin inline-block($bgc, $padding: 10px, $box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.18),$mb:30px) {
+    background-color: $bgc;
+    padding: $padding;
+    box-shadow: $box-shadow;
+    display: block;
+    margin-bottom: $mb;
+}
+
+
 
 
 /* Main */

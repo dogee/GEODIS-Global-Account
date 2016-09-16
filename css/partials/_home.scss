@@ -8,16 +8,20 @@ body {
 }
 
 .home {
-    .quick-menu {
-        padding: 30px 0;
+    .row {
+        padding: 30px 0 30px;
         border-bottom: 1px solid #d8d8d8;
+    }
+    
+    h1 {
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    .quick-menu {
             
         .item {
-            background-color: #fff;
-            padding: 12px;
-            box-shadow: 0px 1px 3px 0 #bbb;
-            display: block;
-            margin-bottom: 30px;
+            @include inline-block(#fff, 12px,0 1px 2px 0 rgba(0, 0, 0, 0.18),0);
             
             &:hover {
                 box-shadow: 0px 2px 5px 0 #bbb;
@@ -35,6 +39,65 @@ body {
             }
             .subtitle {
                 color: #d8d8d8;
+            }
+        }
+    }
+    
+    .last-docs {
+        
+        .docs {
+            @include inline-block(#fff, 5px 5px 5px 50px);
+            background: #fff url(./svg/paper.svg) no-repeat left 10px center;
+            background-size: 25px;
+            
+            h4 {
+                color: #000;
+                font-weight: bold;
+                text-transform: capitalize;
+                font-size: 18px;
+                margin: 1px 0;
+            }
+            
+            .date {
+                font-size: 0.9em;
+                color: #888;
+            }
+            
+            .tools {
+                position: absolute;
+                right: 25px;
+                top: 9px;
+            
+                .btn {
+                    text-indent: -9999px;
+                    border: none;
+                    margin: 0;
+                    padding: 6px 16px;
+                    vertical-align: top;
+                                
+                    &:hover {
+                        background-color: $geodisblue !important;
+                    }
+
+                }
+                .download {
+                    background: url(./svg/telecharger_gris.svg) no-repeat center center;
+                    background-size: 20px;
+                    
+                    &:hover {
+                        background: url(./svg/telecharger_blanc.svg) no-repeat center center;
+                        background-size: 20px;
+                    }
+                }
+                .view {
+                    background: url(./svg/oeil_gris.svg) no-repeat center center;
+                    background-size: 25px;
+                    
+                    &:hover {
+                        background: url(./svg/oeil_blanc.svg) no-repeat center center;
+                        background-size: 25px;
+                    }
+                }  
             }
         }
     }

@@ -44,6 +44,7 @@ Title : Main
   .col-lg-15 {
     width: 20%;
     float: left; } }
+/* Box Shadows */
 /* Main */
 main {
   margin-top: 70px; }
@@ -583,26 +584,70 @@ Title : Home
 body {
   background-color: #F2F2F2; }
 
-.home .quick-menu {
-  padding: 30px 0;
+.home .row {
+  padding: 30px 0 30px;
   border-bottom: 1px solid #d8d8d8; }
-  .home .quick-menu .item {
-    background-color: #fff;
-    padding: 12px;
-    box-shadow: 0px 1px 3px 0 #bbb;
-    display: block;
-    margin-bottom: 30px; }
-    .home .quick-menu .item:hover {
-      box-shadow: 0px 2px 5px 0 #bbb;
-      text-decoration: blink; }
-    .home .quick-menu .item img {
-      width: 40px;
-      height: 40px; }
-    .home .quick-menu .item h3 {
-      text-transform: uppercase;
-      margin: 12px 0 0;
-      font-size: 1.3em; }
-    .home .quick-menu .item .subtitle {
-      color: #d8d8d8; }
+.home h1 {
+  text-transform: uppercase;
+  margin-bottom: 25px; }
+.home .quick-menu .item {
+  background-color: #fff;
+  padding: 12px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.18);
+  display: block;
+  margin-bottom: 0; }
+  .home .quick-menu .item:hover {
+    box-shadow: 0px 2px 5px 0 #bbb;
+    text-decoration: blink; }
+  .home .quick-menu .item img {
+    width: 40px;
+    height: 40px; }
+  .home .quick-menu .item h3 {
+    text-transform: uppercase;
+    margin: 12px 0 0;
+    font-size: 1.3em; }
+  .home .quick-menu .item .subtitle {
+    color: #d8d8d8; }
+.home .last-docs .docs {
+  background-color: #fff;
+  padding: 5px 5px 5px 50px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.18);
+  display: block;
+  margin-bottom: 30px;
+  background: #fff url(./svg/paper.svg) no-repeat left 10px center;
+  background-size: 25px; }
+  .home .last-docs .docs h4 {
+    color: #000;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin: 1px 0; }
+  .home .last-docs .docs .date {
+    font-size: 0.9em;
+    color: #888; }
+  .home .last-docs .docs .tools {
+    position: absolute;
+    right: 25px;
+    top: 9px; }
+    .home .last-docs .docs .tools .btn {
+      text-indent: -9999px;
+      border: none;
+      margin: 0;
+      padding: 6px 16px;
+      vertical-align: top; }
+      .home .last-docs .docs .tools .btn:hover {
+        background-color: #3200e6 !important; }
+    .home .last-docs .docs .tools .download {
+      background: url(./svg/telecharger_gris.svg) no-repeat center center;
+      background-size: 20px; }
+      .home .last-docs .docs .tools .download:hover {
+        background: url(./svg/telecharger_blanc.svg) no-repeat center center;
+        background-size: 20px; }
+    .home .last-docs .docs .tools .view {
+      background: url(./svg/oeil_gris.svg) no-repeat center center;
+      background-size: 25px; }
+      .home .last-docs .docs .tools .view:hover {
+        background: url(./svg/oeil_blanc.svg) no-repeat center center;
+        background-size: 25px; }
 
 /*# sourceMappingURL=theme.css.map */

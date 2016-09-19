@@ -490,7 +490,7 @@ Title : Footer
 */
 footer {
   color: #3200e6;
-  margin-top: 50px; }
+  margin: 30px 0 50px; }
 
 #slogan {
   font-size: 1.2em; }
@@ -581,24 +581,55 @@ form .form-control, form .dropdown-toggle {
 /*
 Title : Home
 */
-body {
+main {
   background-color: #F2F2F2; }
 
-.home .row {
+.home .row:not(.notifications) {
   padding: 30px 0 30px;
   border-bottom: 1px solid #d8d8d8; }
+  .home .row:not(.notifications):last-child {
+    border: none; }
 .home h1 {
   text-transform: uppercase;
   margin-bottom: 25px; }
+.home .btn.more {
+  text-transform: uppercase;
+  margin-top: 30px;
+  /* color: #fff; */ }
+.home .notifications {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #d8d8d8;
+  cursor: pointer; }
+  .home .notifications .notifications-title {
+    color: #888;
+    font-size: 1.05em; }
+  .home .notifications .notifications {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 10px;
+    border-radius: 100%; }
+    .home .notifications .notifications.geodis-alert {
+      background-color: #BD2526; }
+    .home .notifications .notifications.geodis-important {
+      background-color: #FD9434; }
+    .home .notifications .notifications.geodis-normal {
+      background-color: #B1B1AF; }
 .home .quick-menu .item {
   background-color: #fff;
   padding: 12px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.18);
   display: block;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  transition: box-shadow 0.15s ease-in-out; }
   .home .quick-menu .item:hover {
     box-shadow: 0px 2px 5px 0 #bbb;
-    text-decoration: blink; }
+    text-decoration: blink;
+    background: #fff url(./svg/chevron_droit.svg) no-repeat right 15px top 15px;
+    background-size: 15px;
+    transition: box-shadow 0.15s ease-in-out; }
   .home .quick-menu .item img {
     width: 40px;
     height: 40px; }
@@ -649,5 +680,16 @@ body {
       .home .last-docs .docs .tools .view:hover {
         background: url(./svg/oeil_blanc.svg) no-repeat center center;
         background-size: 25px; }
+.home .news-list .news img {
+  width: 100%; }
+.home .news-list .news .news-title {
+  color: #555;
+  margin: 10px 0;
+  display: block; }
+.home .news-list .news:hover {
+  text-decoration: none; }
+  .home .news-list .news:hover .news-title {
+    color: #000;
+    font-size: 1.05em; }
 
 /*# sourceMappingURL=theme.css.map */
